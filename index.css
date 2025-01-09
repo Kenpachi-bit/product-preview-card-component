@@ -1,0 +1,134 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-family: "Montserrat", serif;
+  /* font-family: "Fraunces", serif; */
+  color: var(--Very-dark-blue);;
+}
+
+body{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Cream);
+  height: 100vh;
+}
+main{
+box-sizing: border-box;
+border-radius: 25px;
+background-color: var(--White);
+display: grid;
+}
+
+.image-desktop{
+ display: none;
+}
+
+.image-mobile{
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+h1{
+font-size: 0.9rem;
+font-weight: 400;
+margin-top: 0;
+}
+
+h2{
+  font-size: 2.2rem;
+  font-family: "Fraunces", serif;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.description{
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.5rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.price{
+  font-family: "Fraunces", serif;
+  font-size: 2.3rem;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.old-price{
+  font-family: "Montserrat", serif;
+ text-decoration: line-through var(--Very-dark-blue);
+ font-size: 0.9rem;
+ font-weight: 400;
+ color: var(--Dark-grayish-blue);
+ margin-left: 13px;
+ vertical-align: 50%;
+
+}
+
+button{
+  border: none;
+  padding: 1.2rem ;
+  background-color: var(--Dark-cyan);
+  border-radius: 10px;
+  width:100%;
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon{
+  margin-right:12px ;
+  width: 1.1rem;
+}
+
+.text-section{
+  padding: 25px;
+}
+
+@media only screen and (min-width: 376px) {
+
+  main{
+    max-width: 600px;
+    grid-template-columns: 1fr 1fr;
+    border-radius:1rem;
+  }
+
+  .image-mobile{
+    display: none;
+  }
+
+  .image-desktop{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+   object-fit: cover;
+   border-radius: 0.7rem 0rem 0rem 0.7rem;
+  }
+
+  h1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .price{
+  margin-top: 1rem;
+  }
+  button{
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
